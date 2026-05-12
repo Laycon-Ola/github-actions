@@ -1,6 +1,8 @@
 name: Buidling Blocks                # Name of the workflow
 
-on: workflow_dispatch                            # Trigger to execute the workflow fron U.I
+on: 
+    schedule:
+      - cron: '*/5 * * * *'    # Trigger to execute the workflow fron U.I
 
 jobs:
     echo-hello:                     # Name of the job
@@ -11,7 +13,7 @@ jobs:
     echo-goodbye:
         runs-on: ubuntu-latest
         steps:
-            - name: Failed step
+            - name: Passed Step
               run:  |               # Multi-line script ; #exit with a non zero code, meaning the script that ran failed
                 echo "I will pass"  
                 exit 0
