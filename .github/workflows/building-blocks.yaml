@@ -1,0 +1,20 @@
+name: Buidling Blocks                # Name of the workflow
+
+on: push                             # Trigger to execute the workflow
+
+jobs:
+    echo-hello:                     # Name of the job
+        runs-on: ubuntu-latest      # Environment which the job is to run
+        steps:                      # Steps to be run by the job
+            - name: Say hello       # Name of the step
+              run: echo "Hello, world!" # actual script or github action
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failed step
+              run:  |               # Multi-line script ; #exit with a non zero code, meaning the script that ran failed
+                echo "I will fail"  
+                exit 1
+            - name: Say Goodbye
+              run: echo "Goodbye"                      
+    
