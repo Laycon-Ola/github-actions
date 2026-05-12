@@ -1,6 +1,6 @@
 name: Buidling Blocks                # Name of the workflow
 
-on: push                            # Trigger to execute the workflow
+on: workflow_dispatch                            # Trigger to execute the workflow fron U.I
 
 jobs:
     echo-hello:                     # Name of the job
