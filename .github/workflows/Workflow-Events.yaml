@@ -1,10 +1,7 @@
 name: Workflow Events
 
-on: 
-    push:                                       # the object structure allows us customize easily
+on:                                       # the object structure allows us customize easily
     pull_request:
-    schedule:
-        - cron: '*/5 * * * *'
     workflow_dispatch:    # enable me to trigger the workflow from the U.I
 
 
